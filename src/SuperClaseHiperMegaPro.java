@@ -85,7 +85,6 @@ public class SuperClaseHiperMegaPro {
             }
         }
         Automata automataFinal = stackDeAutomatas.pop();
-        //crearTextFile(automataFinal);
         return automataFinal;
     }
     public Automata crearAutomataSimple(String simbolo){
