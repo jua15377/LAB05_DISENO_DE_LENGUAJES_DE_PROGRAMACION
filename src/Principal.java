@@ -10,8 +10,7 @@ import java.util.Scanner;
  */
 public class Principal {
     public static void main(String args[]) {
-//lee la cadena que contiene la exprexion regular
-        Scanner teclado = new Scanner(System.in);
+
         AnalizadorLexico analizadorLexico = new AnalizadorLexico();
 // lee el archivo
         Scanner s = null;
@@ -30,7 +29,21 @@ public class Principal {
                 s.close();
             }
         }
-        //analiza la
-    analizadorLexico.analizadorDeTexto(arreglo);
+        //analiza la estructura de cocol
+        analizadorLexico.cocolAnalizer(arreglo);
+
+        ArrayList<String> arreglodeDeLineas = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader("test.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if(!line.equals(""))
+                arreglodeDeLineas.add(line);
+            }
+        }
+        catch (IOException e){
+
+        }
+        //System.out.println(arreglodeDeLineas);
+        analizadorLexico.analizador(arreglodeDeLineas);
     }
 }

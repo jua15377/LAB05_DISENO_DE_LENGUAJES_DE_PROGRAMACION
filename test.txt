@@ -8,4 +8,7 @@ KEYWORDS
 if = "if".
 while = "while".
 
+IGNORE "IGNORE"
+
 END Ejemplo.
+
