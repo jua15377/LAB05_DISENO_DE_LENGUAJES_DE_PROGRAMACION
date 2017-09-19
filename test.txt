@@ -7,8 +7,5 @@ hexdigit = digit+"ABCDEF".
 KEYWORDS
 if = "if".
 while = "while".
-
-IGNORE "IGNORE"
-
+IGNORE " ".
 END Ejemplo.
-
